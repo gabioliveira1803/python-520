@@ -141,7 +141,20 @@ lista_de_usuarios = [
   }
 ]
 
-TEMPLATE = '{:>20} | {:>5} | {:>50} | {:>2} | {:>30}'
+lista = []
+for usuario in lista_de_usuarios:
+  
+  if 'l' in usuario['email'].lower() or 'j' in usuario['email'].lower():
+    lista.append(usuario['email'])
+
+    #print('Email:{}'.format(usuario['email']))
+
+    if usuario['idade'] > 25:
+      
+      lista.append(usuario)
+
+#for email in lista:
+TEMPLATE = '{};{};{};{};{};'
 
 CABECALHO = TEMPLATE.format('NOME', 'IDADE', 'ENDEREÇO', 'SEXO', 'EMAIL')
 
@@ -155,4 +168,4 @@ for usuario in lista_de_usuarios:
     usuario['email'],
   )
   print(USUARIO)
-  
+
