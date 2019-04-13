@@ -31,15 +31,27 @@
 #Após cadastrar, exiba os dados dos usuarios cadastrados
 
 lista = []
+resp =[]
 
-for n in range(10):
-	usuario = {
-			'nome': input ('Digite seu nome:'),
+usuario = {
+	'nome': input ('Digite seu nome:'),
+	'idade': input ('Digite sua idade:'),
+	'email': input ('Digite seu email:'),
+}
+lista.append(usuario)
+
+resp = {
+	'cadastro':input ('Deseja cadastrar novo usuario?').upper
+}
+ while resp == sim:
+ 	usuario = {
+		'nome': input ('Digite seu nome:'),
 		'idade': input ('Digite sua idade:'),
-		'email': input ('Digite seu email:')
-	}
-	lista.append(usuario)
+		'email': input ('Digite seu email:'),
+	}	
 
+if resp != sim
+	
 
 for n in lista:
 	print('Usuario Cadastrado:{}'.format(n['nome']))
